@@ -1,6 +1,6 @@
 # Portfolio
 
-### Task done :
+### Tasks done :
   - Main DA
   - Gallery page
 
