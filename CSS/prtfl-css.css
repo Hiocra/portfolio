@@ -34,7 +34,7 @@ body {
 .nav a {
   text-decoration: none;
   color: white;
-  padding: 10px 50px
+  padding: 10px 30px
 }
 
 .nav a:hover {
@@ -71,16 +71,17 @@ body {
   flex-grow: 1;
   text-align: end;
   color: white;
-  font-weight: bolder;
-  font-size: 3em;
+  font-weight:bolder;
+  font-size: 3.5em;
 }
 
 .brief {
   font-family: 'Courier Prime', monospace;
-  font-weight: normal;
+  font-size:1.1em;
+  font-weight: bold;
   text-align: left;
-  padding-left: 20px;
-  line-height: 1.5;
+  padding-left: 70px;
+  line-height: 1.7;
 }
 
 .image {
@@ -118,7 +119,7 @@ body {
 
   justify-content: center;
   justify-items: center;
-  align-items: start;
+  align-items:center;
 }
 
 .g1 { grid-area: g1; }
@@ -147,55 +148,36 @@ body {
 
 
 /* projects page*/
-.projects-p, .projects-s {
+.projects-p, .projects-s{
   font-family: 'Kode Mono', monospace;
   text-align: start;
   color: white;
   font-weight: bolder;
   font-size: 2em;
-  padding-top: 90px;
+  padding-top: 60px;
   padding-left: 50px;
 }
 
+.formore {
+  font-family: 'Kode Mono', monospace;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  font-size: 2em;
+  padding-top: 60px;
+}
 
+.fmlink {
+  text-decoration: none;
+  color: white;
+  padding: 10px 50px
 
+}
 .projects-p-grid, .projects-s-grid {
   padding-top: 50px;
 }
 
-.layout-projects {
-  width: 100%;
-
-  display: grid;
-  grid:
-    "p1 p2 p3" 150px
-    / 150px;
-
-    gap: 90px;
-
-  grid-auto-flow: column;
-  justify-content: center;
-  justify-items: center;
-  align-items: start;
-}
-
-.p1 { grid-area: p1; 
-  font-family: 'Play', sans-serif;
-  justify-items: ;}
-.p2 { grid-area: p2; 
-  font-family: 'Play', sans-serif;
-}
-.p3 { grid-area: p3; 
-  font-family: 'Play', sans-serif;
-}
-
-
-
-{
-  padding-top: 150px;
-}
-
-.layout-projects-s {
+.layout-projects-s, .layout-projects {
   width: 100%;
  
   display: grid;
@@ -208,25 +190,50 @@ body {
   grid-auto-flow: column;
   justify-content: center;
   justify-items: center;
-  align-items: start;
+  align-items: center;
 }
 
-.p1 { grid-area: p1; 
-  border: #000 solid 1px;
+.p1, .p2, .p3 { grid-area: p1,p2,p3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #eb10d8b9 solid 1px;
   border-radius: 10px;
+  font-family: 'Play', sans-serif;
   height: 150px;
-  width: 150px;}
-.p2 { grid-area: p2; 
-  border: #000 solid 1px;
+  width: 150px;
+}
+
+.arrow {
+  text-align: center;
+  color: #ffffff;
+}
+
+.ghlink{
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  padding-top: 100px;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-top: 20px;
+
+}
+
+.ghlink a {
+  color: inherit; 
+  text-decoration: none;
+  padding: 15px;
+}
+
+.ghlink a:hover {
+  background-color: #f73d9a6b;
+  color: #eb10d8b9;
   border-radius: 10px;
-  height: 150px;
-  width: 150px;}
-.p3 { grid-area: p3; 
-  border: #000 solid 1px;
-  border-radius: 10px;
-  height: 150px;
-  width: 150px;}
+  transition-duration: 0.6s;
+}
 /*end project page*/
+
 
 
 @media (max-width: 768px) {
@@ -235,10 +242,9 @@ body {
     flex-direction: column;
     width: 100%;
     position: absolute;
-    top: 50px;
-    left: 0;
+    top: 70px;
     background-color: #3a1030;
-    z-index: 1;
+   
   }
 
   .nav a, .nav li {
@@ -258,16 +264,31 @@ body {
 
   .layout {
     grid-template:
-      "g1" 350px
-      "g2" 350px
-      "g3" 350px
-      "g4" 350px
-      "g5" 350px
-      "g6" 350px
-      "g7" 350px
-      "g8" 350px
-      "g9" 350px
-      / 270px;
+      "g1" 300px
+      "g2" 300px
+      "g3" 300px
+      "g4" 300px
+      "g5" 300px
+      "g6" 300px
+      "g7" 300px
+      "g8" 300px
+      "g9" 300px
+      / 220px;
+  }
+
+  .layout-projects, .layout-projects-s {
+    grid-template:
+      "p1" 120px
+      "p2" 120px
+      "p3" 120px
+      /120px;
+
+  justify-content: left;
+  padding-left: 30px;
+  }
+
+  .projects-p, .projects-s, .formore {
+  font-size: 1.4em;
   }
 }
 
@@ -283,22 +304,38 @@ body {
   
   .layout {
     grid-template:
-      "g1" 350px
-      "g2" 350px
-      "g3" 350px
-      "g4" 350px
-      "g5" 350px
-      "g6" 350px
-      "g7" 350px
-      "g8" 350px
-      "g9" 350px
-      / 270px;
+      "g1" 300px
+      "g2" 300px
+      "g3" 300px
+      "g4" 300px
+      "g5" 300px
+      "g6" 300px
+      "g7" 300px
+      "g8" 300px
+      "g9" 300px
+      / 220px;
   }
+
+  .layout-projects, .layout-projects-s {
+    grid-template:
+      "p1" 100px
+      "p2" 100px
+      "p3" 100px
+      /100px;
+
+  justify-content: left;
+  padding-left: 50px;
+  }
+
+  .projects-p, .projects-s, .formore {
+    font-size: 1.4em;
+    }
+
 }
 
 footer {
   text-align: center;
-  color: #000;
+  color: #ffffff;
   padding: 20px;
   padding-top: 100px;
 }
